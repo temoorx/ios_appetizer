@@ -14,7 +14,7 @@ struct Appetizer : Decodable, Identifiable{
     let price: Double
     let imageURL: String
     let calories: Int
-    let protien: Int
+    let protein: Int
     let carbs: Int
 }
 
@@ -24,7 +24,7 @@ struct AppetizerResponse: Decodable{
 
 
 struct MockData {
-    static let sampleAppetizer = Appetizer(id: 001, name: "Test", description: "test description", price: 10.22, imageURL: "", calories: 20, protien: 12, carbs:20 )
+    static let sampleAppetizer = Appetizer(id: 001, name: "Test", description: "test description", price: 10.22, imageURL: "", calories: 20, protein: 12, carbs:20 )
     
     static let appetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
 }

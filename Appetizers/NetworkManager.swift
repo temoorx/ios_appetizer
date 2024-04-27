@@ -50,16 +50,21 @@ final class NetworkManager {
             throw APError.invalidURL
         }
         
-        let (data, _) = try await URLSession.shared.data(from: url)
-        
         do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            
             let decoder = JSONDecoder()
-            return try decoder.decode(AppetizerResponse.self, from: data).request
+            let decodedResponse = try decoder.decode(AppetizerResponse.self, from: data)
+            
+            return decodedResponse.request
         } catch {
+            // Print out any decoding errors for debugging purposes
+            print("Error decoding appetizers:", error)
             throw APError.invalidData
         }
     }
-    
+
+//    
     
 //    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void ) {
 //        
