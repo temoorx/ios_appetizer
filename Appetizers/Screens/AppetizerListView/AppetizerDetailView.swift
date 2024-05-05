@@ -42,14 +42,14 @@ struct AppetizerDetailView: View {
             }label: {
                 
                 Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(width: 260, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.primaryColor)
-                    .cornerRadius(10)
+                   
+                   
                 
-            }.padding(.bottom, 30)
+            }
+            .buttonStyle(.bordered)
+            .tint(.primaryColor)
+            .controlSize(.large)
+            .padding(.bottom, 30)
         }
         .frame(width: 300, height: 525)
         .background(Color(.systemBackground))

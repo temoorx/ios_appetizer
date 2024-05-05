@@ -30,7 +30,7 @@ struct AccountView: View {
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                         .disableAutocorrection(true)
                     
-                    DatePicker("BirthDate", selection: $birthDate,
+                    DatePicker("Birth Date", selection: $birthDate,
                                displayedComponents: .date)
                     Button{
                         print("tapped ")
