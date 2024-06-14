@@ -15,7 +15,7 @@ struct AppetizerListView: View {
     var body: some View {
         
         ZStack{
-            NavigationView{
+            NavigationStack{
                 List(viewModel.appetizers){
                     appetizer in AppetizerListCell(appetizer: appetizer).onTapGesture {
                         viewModel.selectedAppetizer = appetizer
